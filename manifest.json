@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Frontend Website Editor",
+    "version": "1.0",
+    "description": "Edits the frontend of websites and saves them.",
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": " popup.html"
+    },
+    "icons": {
+
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
